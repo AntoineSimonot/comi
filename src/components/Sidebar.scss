@@ -1,0 +1,36 @@
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 8.5%;
+  height: 96%;
+  background: #6d8bec 0% 0% no-repeat padding-box;
+  border-radius: 20px 0px 0px 20px;
+
+  & > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    height: 58%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  & > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    height: 23%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .icon-sidebar {
+    /* Icon size setting */
+    width: 29px;
+    height: 27px;
+  }
+  .message-opacity {
+    opacity: 0.7;
+  }
+}

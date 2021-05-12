@@ -1,0 +1,32 @@
+.searchbar{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.5px solid #6D8BECBF;
+    border-radius: 25px;
+    opacity: 1;
+    width: 626px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 75px;
+    outline: none;
+    margin-left: 60px;
+}
+
+.searchbar::placeholder{
+    color: #6D8BEC;
+}
+.searchbar:focus{
+    border-color: #a8b3d8bf;
+    box-shadow: 0 0 3px #a8b3d8bf;
+}
+.searchbar:hover{
+    border-color: #152044bf;
+}
+
+.searchbar-form{
+    position: relative;
+}
+.searchbar-icon{
+    position: absolute;
+    left: 85px;
+    top: 10px;
+}
