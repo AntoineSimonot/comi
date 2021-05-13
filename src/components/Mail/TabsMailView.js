@@ -8,12 +8,18 @@ const TabsMailView = (props) => {
     
     const [data, setData] = useState ([])
     const [fetch, setFetch] = useState (true)
-    const [url, setUrl] = useState ([])
+    const [url, setUrl] = useState (["unread"])
 
     const { ChangeURL } = props
-
+  
 
     useEffect(() => {
+      if(ChangeURL != url){
+        setUrl(ChangeURL)
+        setFetch(true)
+        console.log(`http://localhost:3000/messages/${url}`)
+      }
+
       if (fetch) {
           axios.get(`http://localhost:3000/messages/${url}`).then(function (response) {
           setData(response.data);
@@ -21,16 +27,7 @@ const TabsMailView = (props) => {
         })
       } 
 
-      if(!url.includes(ChangeURL)){
-        setUrl(ChangeURL)
-        setFetch(true)
-      }
-
-      // if(fetch){
-      //   console.log(fetch)
-      // }
-
-    }, [data,ChangeURL,fetch])
+    }, [data,ChangeURL,fetch, url])
 
     const mailCreation = () => {
     const liste = []
