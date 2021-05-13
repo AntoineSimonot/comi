@@ -4,22 +4,33 @@ import "./TabsMailView.scss";
 const axios = require('axios').default;
 
 const TabsMailView = (props) => {
- 
+
     
     const [data, setData] = useState ([])
     const [fetch, setFetch] = useState (true)
     const [url, setUrl] = useState ([])
-    const { functionChangeVariable } = props
+
+    const { ChangeURL } = props
 
 
     useEffect(() => {
       if (fetch) {
-        axios.get(`http://localhost:3000/messages/${url}`).then(function (response) {
-        setData(response.data);
-        setFetch(false)
-      })
+          axios.get(`http://localhost:3000/messages/${url}`).then(function (response) {
+          setData(response.data);
+          setFetch(false)
+        })
       } 
-    }, [])
+
+      if(!url.includes(ChangeURL)){
+        setUrl(ChangeURL)
+        setFetch(true)
+      }
+
+      // if(fetch){
+      //   console.log(fetch)
+      // }
+
+    }, [data,ChangeURL,fetch])
 
     const mailCreation = () => {
     const liste = []
