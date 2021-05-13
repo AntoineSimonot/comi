@@ -3,24 +3,33 @@ import SearchBar from "./SearchBar";
 import "./TabsMailView.scss";
 const axios = require('axios').default;
 
+
+
 const TabsMailView = (props) => {
 
     
+  
     const [data, setData] = useState ([])
     const [fetch, setFetch] = useState (true)
     const [url, setUrl] = useState (["unread"])
-
+    const [projet, setprojet] = useState (false)
     const { ChangeURL } = props
   
 
     useEffect(() => {
-      if(ChangeURL != url){
-        setUrl(ChangeURL)
-        setFetch(true)
-        console.log(`http://localhost:3000/messages/${url}`)
+      if (ChangeURL != url) {
+        if (projet == false) {
+          setUrl(ChangeURL)
+          setFetch(true)
+        }
+        else{
+          setFetch(true)
+          setprojet(false)
+        }
       }
-
+     
       if (fetch) {
+        console.log("test")
           axios.get(`http://localhost:3000/messages/${url}`).then(function (response) {
           setData(response.data);
           setFetch(false)
@@ -29,23 +38,42 @@ const TabsMailView = (props) => {
 
     }, [data,ChangeURL,fetch, url])
 
+
+    const changeVariableProject = (urlName) => {
+      setUrl(urlName);
+      setprojet(true)
+      setFetch(true)
+    } 
+    
     const mailCreation = () => {
-    const liste = []
-    for (const message of data) {
-      liste.push(
-      <div>
-        <input type="checkbox" class="check" />
-        <div class="sender-img">
-          <div class="profil-img"></div>
-          <div class="mail-notification"></div>
-        </div>
-        <p class="mail-title">{message.title}</p>
-        <p class="mail-content">
-        {message.content}
-        </p>
-      </div>
-      )
-    }
+      const liste = []
+
+      if (url !== "project") {
+        for (const message of data) {
+          liste.push(
+          <div>
+            <input type="checkbox" class="check" />
+            <div class="sender-img">
+              <div class="profil-img"></div>
+              <div class="mail-notification"></div>
+            </div>
+            <p class="mail-title">{message.title}</p>
+            <p class="mail-content">
+            {message.content}
+            </p>
+          </div>
+          )
+        }
+      }
+      else{
+        for (const projet of data) {
+          liste.push(
+          <div>
+            <p onClick={() => changeVariableProject(`unread/${projet.name}`)} class="mail-title">{projet.name}</p>
+          </div>
+          )
+        }
+      }
     return liste
   };
 
