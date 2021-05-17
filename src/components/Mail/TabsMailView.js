@@ -35,12 +35,12 @@ const TabsMailView = (props) => {
       liste.push(
       <div>
         <input type="checkbox" class="check" />
-        <div class="sender-img">
-          <div class="profil-img"></div>
-          <div class="mail-notification"></div>
+        <div className="sender-img">
+          <div className="profil-img"></div>
+          <div className="mail-notification"></div>
         </div>
-        <p class="mail-title">{message.title}</p>
-        <p class="mail-content">
+        <p className="mail-title">{message.title}</p>
+        <p className="mail-content">
         {message.content}
         </p>
       </div>
@@ -52,9 +52,9 @@ const TabsMailView = (props) => {
   return (
     <div className="content-msgPage">
       <SearchBar />
-      <div class="content-message">
+      <div className="content-message">
         <span>Date</span>
-        <div class="mail">
+        <div className="mail">
         {mailCreation()}
         </div>
       </div>

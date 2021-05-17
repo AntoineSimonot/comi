@@ -3,11 +3,11 @@ import './SearchBar.scss'
 const SearchBar = () => {
   return (
     <div>
-      <form action="" class="searchbar-form">
-        <input type="text" class="searchbar" placeholder="Rechercher" />
-        <img src="./img/headApp/search-icon.png" alt="" class="searchbar-icon" />
+      <form action="" className="searchbar-form">
+        <input type="text" className="searchbar" placeholder="Rechercher" />
+        <img src="./img/headApp/search-icon.png" alt="" className="searchbar-icon" />
       </form>
-      <div class="add-message">
+      <div className="add-message">
         <img src="./assets/svg/add.svg" alt="add icon" />
         <span>Ecrire un mail</span>
       </div>
