@@ -42,35 +42,48 @@ const Login = () => {
 
 
     return (
+      <div id="Login">        
         <form className="test" onSubmit={login}>
-        <h1>Create Account</h1>
-        
-        
-        <label>
-          Email:
-          <input
-            name="email"
-            type="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            required />
-        </label>
-  
-        <label>
-          Password:
-          <input
-            name="password"
-            type="password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            required />
-        </label>
-  
+          
+          <div>
+            <h1>Connection</h1>
+          </div>
+          
+        <div>
+          <div>
+            <label>Adresse mail: </label>
+            <input
+              name="email"
+              type="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required />
+          </div>
+       
 
-        <button>Submit</button>
-        <p >{error}</p>
+        
+          <div> 
+            <label>Mot de passe:</label>
+            <input
+              name="password"
+              type="password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              required />
+              <a href="/register">Vous n'avez pas de compte? S'inscrire</a>
+              
+          </div>
+        </div>
+      
+        <div>
+          <button>Se connecter</button>
+        </div>
+        
+        <p>{error}</p>
       </form>
-    );
+    </div>
+
+  );
 };
 
 export default Login;

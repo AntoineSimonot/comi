@@ -30,6 +30,11 @@ const routes = [
     auth: true
   },
   {
+    path: "/register",
+    sidebar: () => null,
+    main: () => <Mails />,
+  },
+  {
     path: "mail/:id",
     sidebar: () => null,
     main: () => <NotFound />,
