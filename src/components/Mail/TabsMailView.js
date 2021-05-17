@@ -45,6 +45,7 @@ const TabsMailView = (props) => {
     } 
     
     const mailCreation = () => {
+
       const liste = []
 
       if (url !== "project") {
@@ -73,15 +74,16 @@ const TabsMailView = (props) => {
           )
         }
       }
+
     return liste
   };
 
   return (
     <div className="content-msgPage">
       <SearchBar />
-      <div class="content-message">
+      <div className="content-message">
         <span>Date</span>
-        <div class="mail">
+        <div className="mail">
         {mailCreation()}
         </div>
       </div>
