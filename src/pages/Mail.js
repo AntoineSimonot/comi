@@ -19,8 +19,7 @@ const Mail = () => {
       <HeadApp>
         <span onClick={() => changeVariable("unread")}> Non lu(s)</span>
         <span onClick={() => changeVariable("read")}>   Email lu(s)</span>
-        <span onClick={() => changeVariable("projet")}> Projet</span>
-        <span onClick={() => changeVariable("legend")}> Légende</span>
+        <span onClick={() => changeVariable("project")}> Projet</span>
         <span onClick={() => changeVariable("bin")}>    Corbeille</span>
       </HeadApp>
       <MailView />
