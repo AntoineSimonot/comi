@@ -42,12 +42,12 @@ const routes = [
   }
 ];
 
-
-// Verifie si y a quelque chose dans le cache
-// Auth.isAuthenticated = true
-
-
-
+if (localStorage.getItem('email')){
+  Auth.isAuthenticated = true
+}
+else{
+  Auth.isAuthenticated = false
+}
 
 function App() {
   const isLogged = true;

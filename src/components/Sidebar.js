@@ -17,9 +17,11 @@ const Sidebar = () => {
     let location = useLocation();
 
     let signout = () => {
-        Auth.signout(() => {
-        history.push('/');
-        });
+        localStorage.clear();
+        history.push('/login');
+        // Auth.signout(() => {
+        // history.push('/');
+        // });
     };
     
     return (
