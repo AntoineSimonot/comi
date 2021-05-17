@@ -16,31 +16,23 @@ const TabsMailView = (props) => {
     let { ChangeURL } = props
 
     useEffect(() => {
-      if (ChangeURL != url ) {
-        if (projet == false) {
-          setUrl(ChangeURL)
-          setFetch(true)
-        }
-        else if(projet == true){
-          console.log(url)
-          ChangeURL = url
-        }
+      if (ChangeURL != url) {
+        setUrl(ChangeURL)
+        setFetch(true)
       }
      
       if (fetch) {
           axios.get(`http://localhost:3000/messages/${url}`).then(function (response) {
-          setData(response.data);
+          setData(response.data)
           setFetch(false)
         })
       } 
 
-    }, [data,ChangeURL,fetch, url])
+    }, [data,ChangeURL,fetch, url, projet])
 
 
     const changeVariableProject = (urlName) => {
-      console.log(1)
-      setUrl(urlName);
-      setprojet(true)
+      setUrl(urlName)
       setFetch(true)
     } 
     
