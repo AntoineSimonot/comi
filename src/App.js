@@ -11,13 +11,25 @@ import Login from "./pages/Login";
 
 //service
 import Auth from './services/Auth'; 
+import Formation from "./pages/Formation";
+
+
+if (localStorage.getItem('email')){
+  Auth.isAuthenticated = true
+}
+else{
+  Auth.isAuthenticated = false
+}
+
+
 
 const routes = [
   {
     path: "/",
     exact: true,
-    sidebar: () => null,
-    main: () => <h2>Home</h2>,
+    sidebar: () => null,                  // L'etat specifiant si la page requiert une sidebar 
+    main: () => <h2>Home</h2>,            // Page afficher sur le path en question
+    auth: false                           // L'etat specifiant si la page requiert une autification
   },
   {
     path: "/register",
@@ -28,14 +40,21 @@ const routes = [
     path: "/login",
     sidebar: () => null,
     main: () => <Login />,
+    auth: false
   },
   {
     path: "/mail",
-    sidebar: () => <Sidebar />,
-    main: () => <Mails />,
-    auth: true
+    sidebar: () => <Sidebar />,           
+    main: () => <Mails />,                
+    auth: true                            
   },
  
+  {
+    path: "/formation",
+    sidebar: () => <Sidebar />,
+    main: () => <Formation />,        
+    auth: true                        
+  },
   {
     path: "mail/:id",
     sidebar: () => null,
@@ -49,12 +68,6 @@ const routes = [
   }
 ];
 
-if (localStorage.getItem('email')){
-  Auth.isAuthenticated = true
-}
-else{
-  Auth.isAuthenticated = false
-}
 
 function App() {
   const isLogged = true;
