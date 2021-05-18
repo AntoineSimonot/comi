@@ -29,6 +29,7 @@ const Login = () => {
         axios.get(`http://localhost:3000/user?email=${email}&password=${password}`).then(function (response) {
             console.log(response.data.status )
             if (response.data.status !== "404") {
+                console.log(response)
                 localStorage.setItem('email', response.data.data[0].email);
                 Auth.signin(() => {
                 history.push('/mail');

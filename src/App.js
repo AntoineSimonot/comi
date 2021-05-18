@@ -5,6 +5,7 @@ import React from "react";
 
 import Sidebar from "./components/Sidebar";
 import Mails from "./pages/Mail";
+import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 
@@ -19,6 +20,11 @@ const routes = [
     main: () => <h2>Home</h2>,
   },
   {
+    path: "/register",
+    sidebar: () => null,
+    main: () => <Register />,
+  },
+  {
     path: "/login",
     sidebar: () => null,
     main: () => <Login />,
@@ -29,11 +35,7 @@ const routes = [
     main: () => <Mails />,
     auth: true
   },
-  {
-    path: "/register",
-    sidebar: () => null,
-    main: () => <Mails />,
-  },
+ 
   {
     path: "mail/:id",
     sidebar: () => null,
