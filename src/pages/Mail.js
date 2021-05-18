@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import HeadApp from "../components/HeadApp";
-import MailView from "../components/Mail/ListeItemView";
+// import MailView from "../components/Mail/ListeItemView";
 import TabsMailView from "../components/Mail/TabsMailView";
 import Sidebar from "../components/Sidebar";
 import "./Mail.scss";
@@ -22,7 +22,6 @@ const Mail = () => {
         <span onClick={() => changeVariable("project")}> Projet</span>
         <span onClick={() => changeVariable("bin")}>    Corbeille</span>
       </HeadApp>
-      <MailView />
       <TabsMailView ChangeURL = { url } />
     </div>
   );
