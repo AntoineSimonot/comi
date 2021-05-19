@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
+import Show from "./Show";
 import "./TabsMailView.scss";
 const axios = require('axios').default;
 
@@ -13,6 +14,7 @@ const TabsMailView = (props) => {
     const [fetch, setFetch] = useState (true)
     const [url, setUrl] = useState (["unread"])
     const [projet, setprojet] = useState (false)
+    const [show, setShow] = useState ()
     let { ChangeURL } = props
 
     useEffect(() => {
@@ -35,6 +37,10 @@ const TabsMailView = (props) => {
       setUrl(urlName)
       setFetch(true)
     } 
+
+    const showMail = (id) => {
+      setShow(id)
+    } 
     
     const mailCreation = () => {
 
@@ -43,7 +49,7 @@ const TabsMailView = (props) => {
       if (url !== "project") {
         for (const message of data) {
           liste.push(
-          <div>
+          <div className="message" onClick={() => showMail(message)}>
             <input type="checkbox" class="check" />
             <div class="sender-img">
               <div class="profil-img"></div>
@@ -77,6 +83,12 @@ const TabsMailView = (props) => {
         <span>Date</span>
         <div className="mail">
         {mailCreation()}
+        
+         {(() => {
+        if (show) {
+          return  <Show id = { show }></Show>;
+        } 
+      })()}
         </div>
       </div>
     </div>
