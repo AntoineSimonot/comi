@@ -9,6 +9,7 @@
     & > img {
         width: 50px;
         height: 30px;
+        margin-right: 20px;
     }
 
     & > span {
@@ -16,8 +17,15 @@
         align-items: center;
         height: 100% ;
         padding: 0 2%;
+        cursor: pointer;
+        font-weight: 600;
     }
 
-
+    & > span:hover {
+        height: 100%;
+        background-color: white;
+        opacity: 85%;
+        color: #6D8BEC;
+    }
 }
 
