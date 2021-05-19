@@ -71,6 +71,7 @@ const Login = () => {
               value={password}
               onChange={e => setPassword(e.target.value)}
               required />
+              
               <a href="/register">Vous n'avez pas de compte? S'inscrire</a>
               
           </div>
