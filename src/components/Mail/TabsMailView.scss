@@ -123,3 +123,15 @@
 .mail-content{
     width: 70%;
 }
+
+
+.back{
+    & span{
+        position: absolute;
+        top: 160px;
+        right: 6%;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #32FFB4;
+    }
+}
