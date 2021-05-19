@@ -1,0 +1,110 @@
+div .show{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 82% !important;
+    width: 86.5%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+    > div:nth-of-type(1){
+        min-height: 100px;
+        background-color: #F5F5F5;
+        width: 100%;
+
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            width: 450px;
+            margin: 0 20px;
+            height: 100%;
+
+            img{
+                margin: 0 20px;
+            }
+        }
+    }
+
+    > div:nth-of-type(2){
+        height: 100%;
+        background-color: white;
+        width: 100%;
+        display: flex;
+
+        >div:nth-of-type(1){
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 80px;
+                height: 80px;
+                border-radius: 50px;
+                margin-top: 70px;
+            }
+        }
+
+        >div:nth-of-type(2){
+            width: 75%;
+
+            p{
+                margin-top: 20px;
+            }
+
+            >div:nth-of-type(1){
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 15%;
+
+                img{
+                    margin: 0 10px;
+                }
+            }
+
+            >div:nth-of-type(2){
+                display: flex;
+                justify-content:flex-start;
+                height: 65%;
+                flex-direction: column;
+                overflow-y: auto;
+
+               >p:nth-of-type(1){
+                    margin-bottom: 20px;
+                }
+            }
+
+            >div:nth-of-type(3){
+                height: 20%;
+                display: flex;
+                align-items: center;
+                justify-content:space-between;
+                width: 400px;
+                div{
+                    display: flex;
+                    align-items: center;
+                    justify-content:space-around;
+                    width: 180px;
+                    height: 40px;
+                    padding: 0 20px;
+                    border: solid 1px blue;
+                    border-radius: 18px;
+                    color: blue;
+                   
+                }
+
+                p{
+                    margin: 0;
+                }
+            }
+        }
+       
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
