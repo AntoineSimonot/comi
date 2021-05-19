@@ -79,12 +79,15 @@ const TabsMailView = (props) => {
       if (url !== "project") {
         let crop = ""
         for (const message of data) {
-          if (message.content.length > 100) {
-            crop = message.content.substr(0, 100)+"..."
+          if (message.content != undefined) {
+            if (message.content.length > 100) {
+              crop = message.content.substr(0, 100)+"..."
+            }
+            else{
+              crop = message.content
+            }
           }
-          else{
-            crop = message.content
-          }
+        
           
           liste.push(
           <div className="message" onClick={() => showMail(message)}>
