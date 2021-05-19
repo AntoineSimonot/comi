@@ -67,7 +67,14 @@
     /* background-color: black; */
     border-radius: 0 0 19px 19px;
     overflow-y: scroll;
+
+    >div{
+        display: flex;
+        align-items: center;
+    }
 }
+
+
 
 .mail > .message{
     display: flex;
@@ -121,7 +128,7 @@
 }
 
 .mail-content{
-    width: 70%;
+    width: 100%;
 }
 
 

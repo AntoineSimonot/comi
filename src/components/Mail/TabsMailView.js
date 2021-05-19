@@ -13,9 +13,10 @@ const TabsMailView = (props) => {
     const [data, setData] = useState ([])
     const [fetch, setFetch] = useState (true)
     const [url, setUrl] = useState (["unread"])
-
+    const [show, setShow] = useState (false)
     const [projet, setProjet] = useState ([])
     const [change, setChange] = useState (false)
+    const [trigger, setTrigger] = useState (false)
     let { ChangeURL } = props
 
     useEffect(() => {
@@ -45,9 +46,9 @@ const TabsMailView = (props) => {
 
     const showMail = (id) => {
       setShow(id)
+      setTrigger(true)
     } 
     
-
     const mailOfSection = () => {
       const liste = []
 
@@ -76,7 +77,15 @@ const TabsMailView = (props) => {
       const liste = []
 
       if (url !== "project") {
+        let crop = ""
         for (const message of data) {
+          if (message.content.length > 100) {
+            crop = message.content.substr(0, 100)+"..."
+          }
+          else{
+            crop = message.content
+          }
+          
           liste.push(
           <div className="message" onClick={() => showMail(message)}>
             <input type="checkbox" class="check" />
@@ -85,9 +94,8 @@ const TabsMailView = (props) => {
               <div class="mail-notification"></div>
             </div>
             <p class="mail-title">{message.title}</p>
-            <p class="mail-content">
-            {message.content}
-            </p>
+            <div><p class="mail-content">{crop}</p></div>
+            
           </div>
           )
         }
@@ -114,13 +122,13 @@ const TabsMailView = (props) => {
         <div className="mail">
 
         {change == false ? allMail() : mailOfSection() }
-        {mailCreation()}
+      
         
-         {(() => {
-        if (show) {
-          return  <Show id = { show }></Show>;
-        } 
-      })()}
+       
+       <Show trigger={trigger} mail = { show } setTrigger= {setTrigger}>
+          
+        </Show>;
+ 
 
         </div>
       </div>
