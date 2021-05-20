@@ -34,6 +34,10 @@ const Register = () => {
               password: password,
               tel: tel
             }
+          }).then((response) => {
+            console.log("response");
+          }, (error) => {
+            console.log(error);
           });
           history.push('/login');
         }

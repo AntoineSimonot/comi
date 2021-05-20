@@ -4,11 +4,11 @@ import HeadApp from "../components/HeadApp";
 import TabsMailView from "../components/Mail/TabsMailView";
 import Sidebar from "../components/Sidebar";
 import "./Mail.scss";
-const Mail = () => {
+const Mail = (props) => {
 
-
+  const [trigger, setTrigger] = useState (true)
   const [url, setUrl] = useState ([])
-
+  
   const changeVariable = (urlName) => {
     setUrl(urlName);
   } 
@@ -23,6 +23,7 @@ const Mail = () => {
         <span onClick={() => changeVariable("bin")}>    Corbeille</span>
       </HeadApp>
       <TabsMailView ChangeURL = { url } />
+      <sendEmail trigger={trigger} setTrigger= {setTrigger}></sendEmail>;
     </div>
   );
 };
