@@ -8,10 +8,11 @@ import Mails from "./pages/Mail";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
-
+import Calendrier from "./pages/Calendrier";
 //service
 import Auth from './services/Auth'; 
 import Formation from "./pages/Formation";
+
 
 
 if (localStorage.getItem('email')){
@@ -59,6 +60,12 @@ const routes = [
     path: "mail/:id",
     sidebar: () => null,
     main: () => <NotFound />,
+    auth: true
+  },
+  {
+    path: "/calendar",
+    sidebar: () => <Sidebar />,
+    main: () => <Calendrier />,
     auth: true
   },
   {
