@@ -1,0 +1,29 @@
+.card{
+    width: 90%;
+    height: 356px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+
+    &[data-type="text"]{
+        border: 6px solid #2CC58C;
+    }
+    &[data-type="quizz"]{
+        border: 6px solid #F96E6E;
+    }
+    &[data-type="video"]{
+        border: 6px solid #ECB16D;
+    }
+
+
+
+}
+
+

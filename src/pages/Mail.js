@@ -3,7 +3,7 @@ import HeadApp from "../components/HeadApp";
 // import MailView from "../components/Mail/ListeItemView";
 import TabsMailView from "../components/Mail/TabsMailView";
 import Sidebar from "../components/Sidebar";
-import "./Mail.scss";
+import "./MailStyle/Mail.scss";
 const Mail = (props) => {
 
   const [trigger, setTrigger] = useState (true)
@@ -23,7 +23,7 @@ const Mail = (props) => {
         <span onClick={() => changeVariable("bin")}>    Corbeille</span>
       </HeadApp>
       <TabsMailView ChangeURL = { url } />
-      <sendEmail trigger={trigger} setTrigger= {setTrigger}></sendEmail>;
+      <sendEmail trigger={trigger} setTrigger= {setTrigger}></sendEmail>
     </div>
   );
 };

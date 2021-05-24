@@ -21,10 +21,8 @@ const SearchBar = () => {
         <img src="./assets/svg/add.svg" alt="add icon" />
         <span onClick={() => showWrite()}>Ecrire un mail</span>
       </div>
-
-      <SendMail triggerSend={triggerSend} setTriggerSend= {setTriggerSend}>
-          
-        </SendMail>;
+        <SendMail triggerSend={triggerSend} setTriggerSend= {setTriggerSend}>
+        </SendMail>
     </div>
 
     

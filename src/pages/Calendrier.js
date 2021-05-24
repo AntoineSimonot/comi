@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import HeadApp from "../components/HeadApp";
-import "./Calendar.scss";
+import "./CalendarStyle/Calendar.scss";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Task from "../components/Mail/Task";
