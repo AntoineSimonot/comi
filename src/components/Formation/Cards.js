@@ -19,6 +19,8 @@ const Cards = (props) => {
             <button className="btn-card"  data-type={data.type} onClick={() => {
                 props.setTrigger(true) 
                 props.setTitleFormation(data.title)
+                props.setId(data.id)
+                props.setType(data.type)
                 }}>
               Accéder à la formation
             </button>
