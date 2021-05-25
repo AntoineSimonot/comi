@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import "./Cards.scss";
+import ContentOfFormation from './ContentOfFormation';
 
 const Cards = (props) => {
     const {data} = props
 
 
-    
 
+  
 
 
 
@@ -15,7 +16,16 @@ const Cards = (props) => {
             <p>{data.title}</p>
             <p>{data.content}</p>
             <p>Temps nécessaire : environ {data.time}</p>
-            <button>Accéder à la formation</button>
+            <button className="btn-card"  data-type={data.type} onClick={() => {
+                props.setTrigger(true) 
+                props.setTitleFormation(data.title)
+                }}>
+              Accéder à la formation
+            </button>
+            
+            
+            
+
         </div>
     );
 };
