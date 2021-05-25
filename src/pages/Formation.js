@@ -7,10 +7,6 @@ import "./Formation/Formation.scss";
 
 
 const Formation = () => {
-
-
-
-
     return (
         <div className='Formation-Page'>
             <HeadApp/>

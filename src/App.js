@@ -8,10 +8,11 @@ import Mails from "./pages/Mail";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
-
+import Calendrier from "./pages/Calendrier";
 //service
 import Auth from './services/Auth'; 
 import Formation from "./pages/Formation";
+import Visio from "./pages/Visio";
 
 
 if (localStorage.getItem('email')){
@@ -56,9 +57,21 @@ const routes = [
     auth: true                        
   },
   {
+    path: "/visio",
+    sidebar: () => <Sidebar />,
+    main: () => <Visio />,        
+    auth: true                        
+  },
+  {
     path: "mail/:id",
     sidebar: () => null,
     main: () => <NotFound />,
+    auth: true
+  },
+  {
+    path: "/calendar",
+    sidebar: () => <Sidebar />,
+    main: () => <Calendrier />,
     auth: true
   },
   {

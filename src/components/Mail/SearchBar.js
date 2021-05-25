@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './SearchBar.scss'
+import SendMail from "./SendEmail";
+
+
 const SearchBar = () => {
+  const [triggerSend, setTriggerSend] = useState (false)
+
+  const showWrite = () => {
+    setTriggerSend(true)
+  } 
+
+
   return (
     <div>
       <form action="" className="searchbar-form">
@@ -9,9 +19,15 @@ const SearchBar = () => {
       </form>
       <div className="add-message">
         <img src="./assets/svg/add.svg" alt="add icon" />
-        <span>Ecrire un mail</span>
+        <span onClick={() => showWrite()}>Ecrire un mail</span>
       </div>
+
+      <SendMail triggerSend={triggerSend} setTriggerSend= {setTriggerSend}>
+          
+        </SendMail>;
     </div>
+
+    
   );
 };
 

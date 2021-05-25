@@ -11,7 +11,7 @@ const Show = (props) => {
         axios.get(`http://localhost:3000/user/${mail.sender}`).then(function (response) {
             setEmail(response.data.data[0].email)
             setPhoto(response.data.data[0].photo)
-            console.log(photo)
+            console.log(response)
         })
       }, email)
 

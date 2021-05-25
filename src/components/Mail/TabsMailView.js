@@ -26,20 +26,23 @@ const TabsMailView = (props) => {
       }
      
       if (fetch) {
-          axios.get(`http://localhost:3000/messages/${url}`).then(function (response) {
+
+          axios.get(`http://localhost:3000/messages/${url}`, {
+            params: {
+              receveur: localStorage.getItem("id")
+            }
+          }).then(function (response) {
           setData(response.data)
           setFetch(false)
           setChange(false)
         })
       } 
-      // console.log(data);
     }, [data,ChangeURL,fetch, url, projet])
 
 
     const changeVariableProject = (urlName) => {
       axios.get(`http://localhost:3000/messages/section/${urlName}`).then(function (response) {
         setData(response.data)
-        console.log(response.data);
       })  
       setChange(true)
     } 
@@ -53,16 +56,16 @@ const TabsMailView = (props) => {
       const liste = []
 
       for (const message of data) {
+        console.log(message)
         liste.push(
-        <div>
+        <div onClick={() => showMail(message)}>
           <input type="checkbox" class="check" />
           <div class="sender-img">
             <div class="profil-img"></div>
             <div class="mail-notification"></div>
           </div>
           <p class="mail-title">{message.title}</p>
-          <p class="mail-content">
-          {message.content}
+          <p class="mail-content">{message.content}
           </p>
         </div>
         )
