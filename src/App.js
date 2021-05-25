@@ -12,7 +12,7 @@ import Calendrier from "./pages/Calendrier";
 //service
 import Auth from './services/Auth'; 
 import Formation from "./pages/Formation";
-
+import Visio from "./pages/Visio";
 
 
 if (localStorage.getItem('email')){
@@ -54,6 +54,12 @@ const routes = [
     path: "/formation",
     sidebar: () => <Sidebar />,
     main: () => <Formation />,        
+    auth: true                        
+  },
+  {
+    path: "/visio",
+    sidebar: () => <Sidebar />,
+    main: () => <Visio />,        
     auth: true                        
   },
   {
