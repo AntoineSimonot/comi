@@ -131,9 +131,8 @@ const TabsMailView = (props) => {
       
         
        
-       <Show trigger={trigger} mail = { show } setTrigger= {setTrigger}>
-          
-        </Show>;
+      <Show trigger={trigger} mail = { show } setTrigger= {setTrigger}>    
+      </Show>
  
 
         </div>

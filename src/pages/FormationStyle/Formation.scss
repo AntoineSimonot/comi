@@ -1,0 +1,92 @@
+.Formation-Page{
+    height: 97%;
+    background: #6D8BEC 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    width: 87%;
+  }
+
+
+
+.content-formationPage{
+    background-color: #F5F5F5;
+    height: 93%;
+    width: 100%;
+    border-radius: 0 0 19px 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    // overflow-y: hidden;
+}
+
+.cardsFormation{
+  height: 100%;
+  margin-top: 40px;
+  width: 100%;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.trie{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+
+  & > p:nth-child(1){
+    font: normal normal 600 40px/47px Montserrat;
+    letter-spacing: 0px;
+    color: #3E3E3E;
+    opacity: 1;
+  }
+
+  .trie-name{
+    display: flex;
+    align-items: center;
+
+
+    button{
+      padding: 7px 10px;
+      text-align: center;
+      font: normal normal 300 12px/13px Montserrat;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      opacity: 1;
+      border: none;
+    }
+    button:nth-child(1){
+      background: #ECB16D 0% 0% no-repeat padding-box;
+      border-radius: 20px;
+      opacity: 1;
+      margin-right: 20px;
+
+    }
+    button:nth-child(2){
+      background: #2CC58C 0% 0% no-repeat padding-box;
+      border-radius: 20px;
+      opacity: 1;
+      margin-right: 20px;
+
+    } 
+    button:nth-child(3){
+      background: #F96E6E 0% 0% no-repeat padding-box;
+      border-radius: 20px;
+      opacity: 1;
+    }
+
+    button:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+.popUp{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-46%);
+    height: 89% !important;
+    width: 87%;
+    background-color: white;
+    display: flex;
+
+}

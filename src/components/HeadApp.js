@@ -7,7 +7,7 @@ const HeadApp = ({children, onOptionClick}) => {
 
   return (
     <div className="head">
-      <img src="/img/headApp/option-icon.png" alt="" onClick={(e) => onOptionClick()} />
+      <img src="/img/headApp/option-icon.png" alt=""  />
 			{children}
     </div>
   );

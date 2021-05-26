@@ -25,7 +25,7 @@ const SendEmail = (props) => {
         email: receiver
       }
     }).then((response) => {
-    
+      props.setTriggerSend(false)
      
     }, (error) => {
       console.log(error);

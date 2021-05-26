@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "izitoast": "^1.4.0",
     "izitoast-react": "^1.0.16",
+    "marked": "^2.0.5",
     "node-sass": "^4.14.1",
     "react": "^17.0.2",
     "react-calendar": "^3.4.0",
