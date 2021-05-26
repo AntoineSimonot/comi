@@ -32,6 +32,9 @@ const Sidebar = () => {
     let visioLink = () => {
         history.push('/visio');
     }
+    let fileLink = () => {
+        history.push('/file');
+    }
 // -----------------------------Icone pour la sidebar----------------------------------------
     let mail = "/img/sidebar/message-icon.png"
     let home = "/img/sidebar/home-icon.png"
@@ -57,6 +60,9 @@ const Sidebar = () => {
         case window.location.pathname === '/visio':
             calendar = "/img/sidebar/calendar-icon-active.png";  // calendar active
             break;
+        case window.location.pathname === '/folder':
+            calendar = "/img/sidebar/folder-icon-active.png";  // calendar active
+            break;
         default:
             home = "/img/sidebar/home-icon.png";
             break;
@@ -71,7 +77,7 @@ const Sidebar = () => {
         <div className="side-bar">
               <div>
                 <img src={home} alt="" className="icon-sidebar"/>
-                <img src={folder} alt="" className="icon-sidebar"/>
+                <img src={folder} alt="" className="icon-sidebar" onClick={ fileLink }/>
                 <img src={calendar} alt="" className="icon-sidebar" onClick={ calendarLink }/>
                 <div>
                     <img src={mail}  alt="" className="icon-sidebar" onClick={ formationMail }/>
