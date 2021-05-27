@@ -55,7 +55,7 @@ const Sidebar = () => {
             calendar = "/img/sidebar/calendar-icon-active.png";  // calendar active
             break;
         case window.location.pathname === '/visio':
-            calendar = "/img/sidebar/calendar-icon-active.png";  // calendar active
+            visio = "/img/sidebar/visio-icon-active.png";  // calendar active
             break;
         default:
             home = "/img/sidebar/home-icon.png";

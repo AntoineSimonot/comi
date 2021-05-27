@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./ContentOfFormation.scss";
 import marked from 'marked'
+import Quizz from "./Quizz";
 const ContentOfFormation = (props) => {
   let { setTrigger, title , id , type} = props;
 
@@ -43,7 +44,7 @@ const ContentOfFormation = (props) => {
               <button>Je valide la formation</button>
             </div>
           </div>
-        ):null
+        ):<Quizz type={type} id={id} title={title}/>
       }
       
     </div>

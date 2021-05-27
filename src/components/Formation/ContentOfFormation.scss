@@ -29,7 +29,7 @@ div .contentOfFormation-Body{
         }
     }
 
-    
+  
 }
 
 
@@ -54,6 +54,9 @@ div .contentOfFormation-Body{
 
         &[data-type="text"]{
             border-color: #2CC58C ;
+        }
+        &[data-type="quizz"]{
+            border-color: #F96E6E ;
         }
         &[data-type="video"]{
             border-color: #ECB16D ;
@@ -101,6 +104,9 @@ div .contentOfFormation-Body{
 
         &[data-type="text"] button {
             background-color: #2CC58C ;
+        }
+        &[data-type="quizz"] button{
+            background-color: #F96E6E ;
         }
         &[data-type="video"] button {
             background: #ECB16D ;
