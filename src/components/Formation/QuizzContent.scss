@@ -1,0 +1,150 @@
+.QuizzContent-Body{
+    width: 100%;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: column;
+
+
+
+    .title {
+        img {
+           margin-top: -10px; 
+        }
+    }
+}
+
+.quizz{
+    margin-top: 30px;
+    width: 93%;
+    height: 60%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+
+    .questionNum{
+        text-align: center;
+        font: normal normal 600 25px/38px Montserrat;
+        letter-spacing: 0px;
+        color: #3E3E3E;
+        opacity: 1;
+    }
+
+
+    .pourcentage{
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+        height: 23px;
+        background: #F6F8F9;
+        border-radius: 4px;
+        opacity: 1;
+        
+
+        div{
+            height: 23px;
+            background: #72ACFF 0% 0% no-repeat padding-box;
+            border-radius: 4px;
+            opacity: 1;
+        }
+     
+    }
+
+
+    .result-page {
+        margin-top: 100px;
+        .pourcentage{
+            margin-bottom: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        & > p:nth-child(1) {
+            text-align: center;
+            font: normal normal 600 40px/62px Montserrat;
+            letter-spacing: 0px;
+            color: #3E3E3E;
+            opacity: 1;
+            margin-left: 50px;
+
+        }
+        
+        & > p:nth-child(3) {
+
+            text-align: center;
+            font: normal normal 600 40px/47px Montserrat;
+            letter-spacing: 0px;
+            color: #3E3E3E;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            .score{
+                text-align: center;
+                font: normal normal 600 40px/47px Montserrat;
+                letter-spacing: 0px;
+                color: #6D8BEC;   
+            }
+        }
+
+        .fail{
+            margin-left: 50px;
+            margin-top: 50px;
+            text-align: center;
+            font: normal normal normal 25px/20px Montserrat;
+            letter-spacing: 0px;
+            color: #202124;
+            opacity: 1;
+        }
+
+        .restart {
+            background: #6D8BEC 0% 0% no-repeat padding-box;
+            border-radius: 20px;
+            opacity: 1;
+        }
+    }
+
+}
+
+.question-option{
+    // margin-left: auto;
+    // margin-right: auto;
+    
+
+
+    .proposition {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid black;
+        border-radius: 20px;
+        opacity: 1;
+        padding: 15px;
+        margin-top: 30px;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        label{
+            text-align: left;
+            font: normal normal normal 16px/26px Montserrat;
+            letter-spacing: 0px;
+            color: #202124;
+            opacity: 1;
+        }
+        .radio {
+            left: 30px;
+            top: 10px;
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 8px solid #6D8BEC;
+            border-radius: 14px;
+            opacity: 1;
+        }
+    }
+}
+
+
