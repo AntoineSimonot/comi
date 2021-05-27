@@ -41,7 +41,7 @@ const ContentOfFormation = (props) => {
           <div className="bodyContent">
             <div className="contentFormation" data-type={type}>
               <div dangerouslySetInnerHTML={{__html: marked(content)}}/>
-              <button>Je valide la formation</button>
+              <button onClick={() => props.setTrigger(false)}>Je valide la formation</button>
             </div>
           </div>
         ):<Quizz type={type} id={id} title={title}/>

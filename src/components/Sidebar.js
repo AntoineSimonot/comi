@@ -19,7 +19,6 @@ const Sidebar = () => {
         localStorage.clear();                    //Clear le local storage pour enlever la session 
         history.push('/login');                  // Redirection                        
     };
-
     let formationLink = () => {
         history.push('/formation');
     }
@@ -62,6 +61,9 @@ const Sidebar = () => {
             break;
         case window.location.pathname === '/folder':
             calendar = "/img/sidebar/folder-icon-active.png";  // calendar active
+            break;
+        case window.location.pathname === '/file':
+            folder = "/img/sidebar/folder-icon-active.png";  // calendar active
             break;
         default:
             home = "/img/sidebar/home-icon.png";
