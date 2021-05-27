@@ -133,7 +133,7 @@ const QuizzContent = (props) => {
                 />
                 <p>{title}</p>
             </div>
-
+        
             <div className="quizz">
                 {
                     !end ? 
