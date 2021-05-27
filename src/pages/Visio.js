@@ -38,13 +38,13 @@ const Visio = () => {
                             <div>
                                 <div><p>Robert</p></div>
                             </div>
-                            <div>lorem eazeazezare rae ezrazr r eazr eazr aezraez rezar</div>
+                            <div>Salut je cherche un travail!</div>
                             <div>08:42</div>
                         </div>
                         <div>
                             <div>08:43</div>
                             <div>
-                                <p>rareerar ear eare area reazr ezareza raez</p>
+                                <p>Super conférence! J'adore</p>
                             </div>
                         </div>
                     </div>
