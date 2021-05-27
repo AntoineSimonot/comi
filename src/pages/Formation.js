@@ -60,9 +60,6 @@ const Formation = () => {
         <div className='Formation-Page'>
             <HeadApp/>
 
-
-
-            
             <div className="content-formationPage">
                 <div className="trie">
                     <p>Vos formations du mois</p>

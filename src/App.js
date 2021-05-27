@@ -9,6 +9,8 @@ import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Calendrier from "./pages/Calendrier";
+import File from "./pages/File";
+import HomePage from "./pages/HomePage";
 //service
 import Auth from './services/Auth'; 
 import Formation from "./pages/Formation";
@@ -44,12 +46,24 @@ const routes = [
     auth: false
   },
   {
+  path: "/homepage",
+  sidebar: () => null,
+  main: () => <HomePage></HomePage>,
+  auth: false
+  },
+  {
     path: "/mail",
     sidebar: () => <Sidebar />,           
     main: () => <Mails />,                
     auth: true                            
   },
  
+  {
+    path: "/file",
+    sidebar: () => <Sidebar />,
+    main: () => <File />,        
+    auth: true                        
+  },
   {
     path: "/formation",
     sidebar: () => <Sidebar />,
