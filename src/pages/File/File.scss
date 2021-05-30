@@ -96,6 +96,7 @@
       justify-content: flex-start;
       flex-direction: column;
       background-color: whitesmoke;
+      color: black;
 
       ul:nth-of-type(2n){
         background-color: white;
@@ -105,7 +106,7 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
-
+        color: black;
        
         div:nth-of-type(1){
           width: 20%;

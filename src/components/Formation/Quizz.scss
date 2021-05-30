@@ -1,3 +1,7 @@
+.all-Body{
+    overflow-y: scroll;
+
+
 .Body-Quizz{
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 6px solid transparent;
@@ -8,10 +12,7 @@
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 200px;
-    padding-right: 200px;
     padding-bottom: 20px;
-
     &[data-type="text"]{
         border-color: #2CC58C ;
     }
@@ -58,7 +59,7 @@
 
 
     button {
-        margin-top: 50px;
+
         border: none;
         font: normal normal medium Montserrat;
         font-size: 20px;
@@ -100,3 +101,4 @@
     }
 }
 
+}

@@ -34,16 +34,18 @@ const Quizz = (props) => {
 
 
     return (
-        <div className="Body-Quizz" data-type={type}>
-            <div dangerouslySetInnerHTML={{__html: marked(content)}}/>
-            <button onClick={() => setTrigger(true)}>Je valide la formation</button>
-            <div>
-                {trigger ?
-                        <div className="popUp">
-                            <QuizzContent setTrigger={setTrigger} title={props.title} /> 
-                        </div>
-                    : null
-                }
+        <div className="all-Body">
+            <div className="Body-Quizz" data-type={type}>
+                <div dangerouslySetInnerHTML={{__html: marked(content)}}/>
+                <button onClick={() => setTrigger(true)}>Je valide la formation</button>
+                <div>
+                    {trigger ?
+                            <div className="popUp">
+                                <QuizzContent setTrigger={setTrigger} title={props.title} /> 
+                            </div>
+                        : null
+                    }
+                </div>
             </div>
         </div>
             

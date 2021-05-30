@@ -37,7 +37,7 @@ const SendEmail = (props) => {
     return (
         <div class = "sendEmail">
           <form onSubmit={send}>
-          <img onClick={() => props.setTriggerSend(false)} src="./img/mail/bin.png" alt="" srcset=""/>
+          <img onClick={() => props.setTriggerSend(false)} src="./img/file/croix.png" alt="" srcset=""/>
           <div>
             <div>
               <p>A</p>
@@ -67,9 +67,7 @@ const SendEmail = (props) => {
             </div>
             <div>
               <button>Envoyer</button>
-              <img src="./img/mail/bin.png" alt="" srcset=""/>
-              <img src="./img/mail/bin.png" alt="" srcset=""/>
-              <img src="./img/mail/bin.png" alt="" srcset=""/>
+              <img src="./img/mail/trier.png" alt="" srcset=""/>
             </div>
           </div>
 

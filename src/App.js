@@ -27,13 +27,7 @@ else{
 
 
 const routes = [
-  {
-    path: "/",
-    exact: true,
-    sidebar: () => null,                  // L'etat specifiant si la page requiert une sidebar 
-    main: () => <h2>Home</h2>,            // Page afficher sur le path en question
-    auth: false                           // L'etat specifiant si la page requiert une autification
-  },
+  
   {
     path: "/register",
     sidebar: () => null,
@@ -44,12 +38,6 @@ const routes = [
     sidebar: () => null,
     main: () => <Login />,
     auth: false
-  },
-  {
-  path: "/homepage",
-  sidebar: () => null,
-  main: () => <HomePage></HomePage>,
-  auth: false
   },
   {
     path: "/mail",
@@ -89,6 +77,12 @@ const routes = [
     auth: true
   },
   {
+    path: "/",
+    sidebar: () => null,
+    main: () => <HomePage></HomePage>,
+    auth: false
+  },
+  {
     path: "*",
     sidebar: () => null,
     main: () => <NotFound />,
@@ -124,7 +118,7 @@ function App() {
                   if (route.auth)
                     {
                       return (
-                        Auth.isAuthenticated ? (<route.main />) : (<Redirect to={{ pathname: '/login', state:{ from: location } }}/> )
+                        Auth.isAuthenticated ? (<route.main />) : (<Redirect to={{ pathname: '/', state:{ from: location } }}/> )
                       ) 
                     } else
                     {
