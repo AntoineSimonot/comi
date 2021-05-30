@@ -17,7 +17,7 @@ const Sidebar = () => {
 
     let signout = () => {
         localStorage.clear();                    //Clear le local storage pour enlever la session 
-        history.push('/login');                  // Redirection                        
+        history.push('/');                  // Redirection                        
     };
     let formationLink = () => {
         history.push('/formation');
